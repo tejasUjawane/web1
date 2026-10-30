@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Explorer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6b35;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
+}
+
+.package {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.price {
+    font-size: 32px;
+    color: #0d6efd;
+    margin: 15px 0;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #0d6efd;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.contact {
+    max-width: 700px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">Travel Explorer</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Discover The World</h1>
+        <p>Your next adventure starts here.</p>
+        <a href="#destinations" class="btn">Explore Now</a>
+    </div>
+</section>
+
+<section id="destinations">
+    <h2 class="section-title">Popular Destinations</h2>
+
+    <div class="destinations">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+            <div class="card-content">
+                <h3>Tokyo, Japan</h3>
+                <p>Experience the perfect blend of tradition and technology.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Bali">
+            <div class="card-content">
+                <h3>Bali, Indonesia</h3>
+                <p>Tropical beaches, luxury resorts and beautiful sunsets.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?auto=format&fit=crop&w=800&q=80" alt="Paris">
+            <div class="card-content">
+                <h3>Paris, France</h3>
+                <p>Discover romance, culture and world-famous landmarks.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="packages">
+    <h2 class="section-title">Travel Packages</h2>
+
+    <div class="packages">
+
+        <div class="package">
+            <h3>Basic Trip</h3>
+            <div class="price">$499</div>
+            <p>3 Days / 2 Nights</p>
+            <p>Hotel Included</p>
+            <p>Breakfast Included</p>
+        </div>
+
+        <div class="package">
+            <h3>Premium Tour</h3>
+            <div class="price">$999</div>
+            <p>7 Days / 6 Nights</p>
+            <p>Luxury Hotel</p>
+            <p>Guided Tours</p>
+        </div>
+
+        <div class="package">
+            <h3>Luxury Escape</h3>
+            <div class="price">$1999</div>
+            <p>10 Days / 9 Nights</p>
+            <p>5-Star Resort</p>
+            <p>Private Guide</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Testimonials</h2>
+
+    <div class="testimonials">
+
+        <div class="testimonial">
+            <p>"Amazing travel experience. Everything was perfectly planned."</p>
+            <strong>- Sarah</strong>
+        </div>
+
+        <div class="testimonial">
+            <p>"Fantastic service with excellent destinations."</p>
+            <strong>- Michael</strong>
+        </div>
+
+        <div class="testimonial">
+            <p>"One of the best vacations I've ever had."</p>
+            <strong>- Emma</strong>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Travel Explorer. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
